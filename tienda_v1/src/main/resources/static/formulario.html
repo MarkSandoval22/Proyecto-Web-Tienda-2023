@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Pedido</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/EstilosFormulario.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <a href="index.html" id="volver">Volver</a>
+    <div class="form-container">
+        <h2>Formulario de Pedido</h2>
+        <form action="procesar_pedido.php" method="post" enctype="multipart/form-data">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <label for="descripcion">Descripción del producto:</label>
+            <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
+
+            <label for="color">Color preferido:</label>
+            <select id="color" name="color">
+                <option value="rojo">Rojo</option>
+                <option value="azul">Azul</option>
+                <option value="verde">Verde</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <label for="locacion">Locación:</label>
+            <input type="radio" id="adentro" name="locacion" value="Adentro de la GAM" required>
+            <label for="adentro">Adentro de la GAM</label>
+            <input type="radio" id="afuera" name="locacion" value="Afuera de la GAM">
+            <label for="afuera">Afuera de la GAM</label>
+            <input type="radio" id="otra" name="locacion" value="Otra">
+            <label for="otra">Otra</label>
+
+            <label for="foto">Subir una foto:</label>
+            <input type="file" id="foto" name="foto" accept="image/*">
+
+            <div class="actions">
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpiar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

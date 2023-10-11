@@ -7,28 +7,61 @@ Fecha: 09/18/2023
     <head>
         <title>Tienda en linea</title>
         <meta charset="UTF-8">
+        <link href="css/EstilosIndex.css" rel="stylesheet" type="text/css"/>
+
         
     </head>
     <body>
-        <div>
-            <h1 style="text-align: center">Home</h1>
-            <h2>Bienvenidos a la tienda en linea</h2>
+         <header>
+            <div class="logo">
+                <img src="image/logo.png" alt="Logo de la tienda">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="fotos.html">Fotos</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                    <li><a href="formulario.html">Formulario</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <br>
+        <h2>Inicio - Últimas Ofertas</h2>
+        <br>
+        <div class="container">
             
+            <div class="product">
+                <img src="image/Teclado.jpg" alt=""/>
+                <p>El K70 RGB TKL de Corsair es un teclado descaradamente centrado en los juegos. 
+                   Disponible con los tipos switches más rapidos del mundo.<a href="TecladoInfo.html" class="comprar-link">Comprar</a> </p>
+                
+            </div>
+            
+            <div class="product">
+                <img src="image/CPU.jpeg" alt=""/>
+                <p>El procesador Intel Core i9 es una potente procesador 
+                    que ofrece un rendimiento excepcional. Equipado con múltiples núcleos y 
+                    tecnología Hyper-Threading, es un componente necesario para los gamers
+                    que quieren lo mejor de lo mejor.<a href="CpuInfo.html" class="comprar-link">Comprar</a></p>
+            </div>
+
+            
+            <div class="product">
+                <img src="image/Headset.jpg" alt=""/>
+                <p>Los auriculares Razer son la elección perfecta para los entusiastas del sonido. 
+                    Con una calidad de audio excepcional y comodidad superior, estos auriculares te sumergirán 
+                    en tu experiencia de juego o entretenimiento.<a href="HeadsetInfo.html" class="comprar-link">Comprar</a></p>
+
+            </div>
         </div>
         
-        <div style="text-align: center">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat.</p>
-                
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2>Mira nuestros últimos videos</h2>
 
+        <div class="video-container">
+            <iframe width="560" height="460" src="https://www.youtube.com/embed/fd7IUS9p_8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-        <br>
-        <br>
-        <h2>Articulos variados</h2>
+
+        
     </body>
 </html>
