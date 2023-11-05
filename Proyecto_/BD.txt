@@ -1,0 +1,35 @@
+CREATE SCHEMA crgames;
+create user 'admin'@'%' identified by 'admin_pass';
+grant all privileges on crgames.* to 'admin'@'%';
+flush privileges;
+
+CREATE TABLE crgames.juego (
+  id_juego INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(20) NOT NULL,
+  plataforma VARCHAR(20) NOT NULL,
+  idioma VARCHAR(20) NOT NULL,
+  genero VARCHAR(30) NOT NULL,
+  tamano DOUBLE,
+  formato VARCHAR(30) NOT NULL,
+  descripcion VARCHAR(130) NOT NULL,
+PRIMARY KEY (`id_juego`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+
+CREATE TABLE crgames.usuario (
+  id_usuario INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(20) NOT NULL,
+  correo VARCHAR(20) NOT NULL,
+  contrasena VARCHAR(20) NOT NULL,
+  fecha_nacimiento date NOT NULL,
+  PRIMARY KEY (`id_usuario`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+
+INSERT INTO crgames.juego (id_juego,nombre,plataforma,idioma,genero,tamano,formato,descripcion) VALUES 
+(1,'FARCRY 6', 'Windows','Español','Acción',0,'ISO',' Es un videojuego de disparos en primera persona desarrollado por Ubisoft. Es la sexta entrega principal de la serie Far Cry');
+
+INSERT INTO crgames.usuario (id_usuario,nombre,correo,contrasena,fecha_nacimiento) VALUES 
+(1,'Leo', 'leo@prueba.com','12345678','1998-09-18');
